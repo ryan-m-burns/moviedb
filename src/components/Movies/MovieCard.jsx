@@ -1,5 +1,7 @@
 import './MovieCard.css';
 import { IMG_URL } from '../../globals/globals';
+import { formatReleaseDate, formatRating } from '../../utils/helpers';
+
 export default function MovieCard({ movie }) {
   return (
     <div className='movie-card'>
@@ -11,12 +13,12 @@ export default function MovieCard({ movie }) {
       <div className='backdrop'>
         <div className='title-and-release'>
           <h2>{movie.title}</h2>
-          <p>{movie.releaßse_date}</p>
+          <p>{formatReleaseDate(movie.release_date)}</p>
         </div>
       </div>
       <div className='rating-and-favorite'>
-        <p>{movie.vote_average}</p>
-        <button>❤️</button>
+        <p>{formatRating(movie.vote_average)}</p>
+        <button className='favorite-btn'>❤️</button>
       </div>
     </div>
   );

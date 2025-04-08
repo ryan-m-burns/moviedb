@@ -7,8 +7,12 @@ function formatReleaseDate(date) {
   });
 }
 
+function formatRating(rating) {
+  return rating.toFixed(1);
+}
+
 function getCurrentYear() {
   return new Date().getFullYear();
 }
 
-export { formatReleaseDate, getCurrentYear };
+export { formatReleaseDate, formatRating, getCurrentYear };
