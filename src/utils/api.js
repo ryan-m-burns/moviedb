@@ -13,4 +13,19 @@ function getPopularMovies() {
       throw error;
     });
 }
-export { getPopularMovies };
+
+function getMovieById(id) {
+  return fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch movie');
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error fetching movie by ID:', error);
+      throw error;
+    });
+}
+
+export { getPopularMovies, getMovieById };
