@@ -20,7 +20,6 @@ export default function PageHome() {
   return (
     <div>
       <h1>Page Home</h1>
-      <h2>Popular Movies</h2>
       <Movies title='Popular Movies' movies={popularMovies} />
     </div>
   );
