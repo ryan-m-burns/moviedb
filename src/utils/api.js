@@ -23,7 +23,7 @@ function getMovieById(id) {
       return response.json();
     })
     .catch((error) => {
-      console.error('Error fetching movie:', error);
+      console.error('Error fetching movie by ID:', error);
       throw error;
     });
 }
