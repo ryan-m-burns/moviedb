@@ -1,7 +1,7 @@
 import './PageHome.css';
 import { getPopularMovies } from '../utils/api';
 import { useEffect, useState } from 'react';
-
+import Movies from '../components/Movies/Movies';
 export default function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
 
@@ -20,6 +20,7 @@ export default function PageHome() {
   return (
     <div>
       <h1>Page Home</h1>
+      <Movies title='Popular Movies' movies={popularMovies} />
     </div>
   );
 }
