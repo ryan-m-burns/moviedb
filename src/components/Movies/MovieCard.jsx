@@ -1,10 +1,13 @@
 import './MovieCard.css';
 import { IMG_URL } from '../../globals/globals';
 import { formatReleaseDate, formatRating } from '../../utils/helpers';
+import { useNavigate } from 'react-router-dom';
 
 export default function MovieCard({ movie }) {
+  const navigate = useNavigate();
+
   return (
-    <div className='movie-card'>
+    <div onClick={() => navigate(`/movie/${movie.id}`)} className='movie-card'>
       <img
         src={`${IMG_URL}w342${movie.poster_path}`}
         alt={movie.title}
