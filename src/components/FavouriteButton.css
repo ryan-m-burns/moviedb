@@ -1,0 +1,36 @@
+.favourite-btn {
+  background: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+.favourite-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.filled-heart {
+  color: red;
+  background: none;
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  border: 1px solid red;
+  padding: 4px 2px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  transition: transform 0.2s;
+}
+
+.hollow-heart {
+  color: rgba(255, 255, 255, 0.327);
+  background: none;
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.327);
+  padding: 4px 2px;
+}

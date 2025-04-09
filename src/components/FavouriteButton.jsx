@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import './FavouriteButton.css';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function FavouriteButton({ movie }) {
   const { favourites, addFavourite, removeFavourite } =
@@ -16,5 +18,13 @@ export default function FavouriteButton({ movie }) {
       addFavourite(movie);
     }
   }
-  return <button onClick={handleClick}>{isFavourite ? '❤️' : '🤍'}</button>;
+  return (
+    <button className='favourite-btn' onClick={handleClick}>
+      {isFavourite ? (
+        <FontAwesomeIcon icon={faHeart} className='filled-heart' />
+      ) : (
+        <FontAwesomeIcon icon={faHeart} className='hollow-heart' />
+      )}
+    </button>
+  );
 }
