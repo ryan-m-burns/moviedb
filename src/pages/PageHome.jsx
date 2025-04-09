@@ -18,9 +18,8 @@ export default function PageHome() {
   console.log(popularMovies);
 
   return (
-    <div>
-      <h1>Page Home</h1>
+    <>
       <Movies title='Popular Movies' movies={popularMovies} />
-    </div>
+    </>
   );
 }
