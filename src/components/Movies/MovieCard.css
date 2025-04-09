@@ -72,7 +72,7 @@
   opacity: 0.7;
 }
 
-.rating-and-favorite {
+.rating-and-favourite {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -82,7 +82,7 @@
   z-index: 3;
 }
 
-.rating-and-favorite p {
+.rating-and-favourite p {
   background-color: rgba(0, 0, 0, 0.6);
   color: #ffcc00;
   font-size: 0.75rem;
@@ -92,7 +92,7 @@
   margin: 0;
 }
 
-.favorite-btn {
+.favourite-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -103,7 +103,7 @@
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
 }
 
-.favorite-btn:hover {
+.favourite-btn:hover {
   opacity: 1;
   transform: scale(1.15);
 }

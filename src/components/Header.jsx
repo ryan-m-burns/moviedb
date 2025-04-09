@@ -1,11 +1,12 @@
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,6 +24,10 @@ export default function Header() {
     };
   }, []);
 
+  const handleClick = () => {
+    setOpen(false);
+  };
+
   return (
     <header>
       <img
@@ -32,14 +37,30 @@ export default function Header() {
       />
       <Hamburger toggled={isOpen} toggle={setOpen} />
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <Link to='/' className='nav-link'>
+        <Link
+          to='/'
+          className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+          onClick={handleClick}
+        >
           Home
         </Link>
-        <Link to='/about' className='nav-link'>
+        <Link
+          to='/about'
+          className={`nav-link ${
+            location.pathname === '/about' ? 'active' : ''
+          }`}
+          onClick={handleClick}
+        >
           About
         </Link>
-        <Link to='/favorites' className='nav-link'>
-          Favorites
+        <Link
+          to='/favourites'
+          className={`nav-link ${
+            location.pathname === '/favourites' ? 'active' : ''
+          }`}
+          onClick={handleClick}
+        >
+          Favourites
         </Link>
       </div>
     </header>
