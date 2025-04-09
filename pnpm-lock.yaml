@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      hamburger-react:
+        specifier: ^2.5.2
+        version: 2.5.2(react@19.1.0)
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -691,6 +694,11 @@ packages:
   globals@15.15.0:
     resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
+
+  hamburger-react@2.5.2:
+    resolution: {integrity: sha512-xsv/I7wQX1RDaulDnvMVCXMMRXnkwnUnkE8seD5eNVZJ4nIrjtK5LLA20l5x/pJ+mPWOzlFxW32VJ86Gbo2Njw==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19
 
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -1548,6 +1556,10 @@ snapshots:
   globals@14.0.0: {}
 
   globals@15.15.0: {}
+
+  hamburger-react@2.5.2(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   has-flag@4.0.0: {}
 
