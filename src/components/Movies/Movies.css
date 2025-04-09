@@ -1,12 +1,17 @@
 .movies {
-  margin: 0 auto;
+  margin: 2rem 0;
+  background-color: var(--color-primary);
 }
-
+.movies h1 {
+  font-size: 2rem;
+  color: var(--text-color-primary);
+  padding-left: 3rem;
+}
 .movies-container {
   display: flex;
   gap: 0.5rem;
   overflow-x: scroll;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 1rem;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
@@ -24,6 +29,7 @@
     margin: 0 auto;
     padding: 1rem;
     scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--color-secondary) var(--color-primary); /* For Firefox */
     -ms-overflow-style: auto; /* For Internet Explorer and Edge */
   }
 
