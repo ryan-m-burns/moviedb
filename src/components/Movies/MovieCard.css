@@ -73,13 +73,13 @@
 }
 
 .rating-and-favourite {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  position: relative;
+  justify-content: space-between;
   display: flex;
   align-items: center;
-  gap: 8px;
+  padding: 0 5px;
   z-index: 3;
+  margin: auto;
 }
 
 .rating-and-favourite p {

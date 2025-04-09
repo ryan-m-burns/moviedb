@@ -22,6 +22,7 @@ export default function MovieCard({ movie }) {
       </div>
       <div className='rating-and-favourite'>
         <p>{formatRating(movie.vote_average)}</p>
+
         <FavouriteButton movie={movie} />
       </div>
     </div>
