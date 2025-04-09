@@ -12,7 +12,6 @@ export default function AppRouter() {
     <BrowserRouter>
       <GlobalProvider>
         <Header />
-        <Header />
         <Routes>
           <Route path='/' element={<PageHome />} />
           <Route path='/movie/:id' element={<PageMovie />} />

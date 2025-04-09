@@ -13,9 +13,12 @@ body {
 
 body {
   line-height: 1.5;
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-primary);
 }
 
 img,
@@ -42,4 +45,10 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+:root {
+  --color-primary: #3b424e;
+  --color-secondary: #282c34;
+  --text-color-primary: #ffffff;
 }
