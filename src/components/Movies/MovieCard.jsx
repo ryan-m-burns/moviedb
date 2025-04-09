@@ -3,7 +3,8 @@ import { IMG_URL } from '../../globals/globals';
 import { formatReleaseDate, formatRating } from '../../utils/helpers';
 import { useNavigate } from 'react-router-dom';
 import FavouriteButton from '../FavouriteButton';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 export default function MovieCard({ movie }) {
   const navigate = useNavigate();
 
@@ -21,7 +22,10 @@ export default function MovieCard({ movie }) {
         </div>
       </div>
       <div className='rating-and-favourite'>
-        <p>{formatRating(movie.vote_average)}</p>
+        <p>
+          <FontAwesomeIcon icon={faStar} />
+          {formatRating(movie.vote_average)}
+        </p>
 
         <FavouriteButton movie={movie} />
       </div>
