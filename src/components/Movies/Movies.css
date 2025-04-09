@@ -4,7 +4,7 @@
 
 .movies-container {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   overflow-x: scroll;
   margin: 0 auto;
   padding: 1rem;
@@ -19,13 +19,12 @@
 @media (min-width: 768px) {
   .movies-container {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     overflow-x: scroll;
     margin: 0 auto;
     padding: 1rem;
     scrollbar-width: thin; /* For Firefox */
     -ms-overflow-style: auto; /* For Internet Explorer and Edge */
-    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
   }
 
   .movies-container::-webkit-scrollbar {

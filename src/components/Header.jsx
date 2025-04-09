@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <header>
-      <div className='header-logo'>🎥</div>
+      <img
+        src='/images/rmdb-high-resolution-logo-transparent.png'
+        alt='rmdb-logo'
+        className='rmdb-logo'
+      />
       <div className='nav-links'>
         <Link to='/' className='nav-link'>
           Home

@@ -5,6 +5,9 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'VT323', monospace;
 }
 .nav-links {
   display: flex;
@@ -17,4 +20,9 @@ header {
   color: lightgrey;
   transition: color 0.2s;
   cursor: pointer;
+}
+
+.rmdb-logo {
+  height: 60px;
+  width: auto;
 }
