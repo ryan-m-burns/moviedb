@@ -2,16 +2,27 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
 
-  const handleResize = () => {
-    if (window.innerWidth > 768) {
-      setOpen(false);
-    }
-  };
-  window.addEventListener('resize', handleResize);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener
+    // when the component unmounts or the effect re-runs
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header>
       <img
