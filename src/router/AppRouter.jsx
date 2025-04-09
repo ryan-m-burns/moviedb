@@ -5,18 +5,22 @@ import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { GlobalProvider } from '../context/GlobalContext';
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' element={<PageHome />} />
-        <Route path='/movie/:id' element={<PageMovie />} />
-        <Route path='/about' element={<PageAbout />} />
-        <Route path='/favorites' element={<PageFavorites />} />
-      </Routes>
-      <Footer />
+      <GlobalProvider>
+        <Header />
+        <Header />
+        <Routes>
+          <Route path='/' element={<PageHome />} />
+          <Route path='/movie/:id' element={<PageMovie />} />
+          <Route path='/about' element={<PageAbout />} />
+          <Route path='/favorites' element={<PageFavorites />} />
+        </Routes>
+        <Footer />
+      </GlobalProvider>
     </BrowserRouter>
   );
 }
