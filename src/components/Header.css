@@ -8,13 +8,31 @@ header {
   align-items: center;
   font-size: 1.5rem;
   font-family: 'VT323', monospace;
-}
-.nav-links {
-  display: flex;
-  gap: 20px;
-  font-weight: bold;
+  height: 100px;
 }
 
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  font-weight: bold;
+  position: fixed;
+  width: 0;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  background-color: var(--color-secondary);
+  height: 100vh;
+  right: 0;
+  top: 100px;
+  padding-top: 100px;
+  font-size: 2rem;
+}
+.nav-links.open {
+  width: 50%;
+  padding-right: 20px;
+}
 .nav-link:hover {
   text-decoration: underline;
   color: lightgrey;
@@ -25,4 +43,24 @@ header {
 .rmdb-logo {
   height: 60px;
   width: auto;
+}
+.hamburger-react {
+  display: block; /* Visible by default */
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    transition: none;
+  }
+  .hamburger-react {
+    display: none;
+  }
 }

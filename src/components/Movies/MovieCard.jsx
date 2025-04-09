@@ -2,7 +2,7 @@ import './MovieCard.css';
 import { IMG_URL } from '../../globals/globals';
 import { formatReleaseDate, formatRating } from '../../utils/helpers';
 import { useNavigate } from 'react-router-dom';
-import FavoriteButton from '../FavoriteButton';
+import FavouriteButton from '../FavouriteButton';
 
 export default function MovieCard({ movie }) {
   const navigate = useNavigate();
@@ -20,9 +20,9 @@ export default function MovieCard({ movie }) {
           <p>{formatReleaseDate(movie.release_date)}</p>
         </div>
       </div>
-      <div className='rating-and-favorite'>
+      <div className='rating-and-favourite'>
         <p>{formatRating(movie.vote_average)}</p>
-        <FavoriteButton movie={movie} />
+        <FavouriteButton movie={movie} />
       </div>
     </div>
   );

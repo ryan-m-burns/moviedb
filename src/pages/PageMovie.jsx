@@ -4,7 +4,7 @@ import { getMovieById } from '../utils/api';
 import { useState, useEffect } from 'react';
 import { IMG_URL } from '../globals/globals';
 import { formatReleaseDate, formatRating } from '../utils/helpers';
-import FavoriteButton from '../components/FavoriteButton';
+import FavouriteButton from '../components/FavouriteButton';
 
 export default function PageMovie() {
   const [movie, setMovie] = useState(null);
@@ -26,7 +26,7 @@ export default function PageMovie() {
             alt={movie?.title}
           />
           <h2>{movie.title}</h2>
-          <FavoriteButton movie={movie} />
+          <FavouriteButton movie={movie} />
           <h3>{formatReleaseDate(movie.release_date)}</h3>
           <h3>{movie.runtime} min</h3>
           <h3>{formatRating(movie.vote_average)} ⭐</h3>
