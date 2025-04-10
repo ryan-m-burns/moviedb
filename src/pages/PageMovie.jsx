@@ -34,12 +34,14 @@ export default function PageMovie() {
               alt={movie?.title}
               className='movie-detail-poster'
             />
-            <h2>{movie.title}</h2>
-            <FavouriteButton movie={movie} />
-            <h3>{formatReleaseDate(movie.release_date)}</h3>
-            <h3>{movie.runtime} min</h3>
-            <h3>{formatRating(movie.vote_average)} ⭐</h3>
-            <p>{movie.overview}</p>
+            <div className='movie-detail-info'>
+              <h2>{movie.title}</h2>
+              <FavouriteButton movie={movie} />
+              <h3>{formatReleaseDate(movie.release_date)}</h3>
+              <h3>{movie.runtime} min</h3>
+              <h3>{formatRating(movie.vote_average)} ⭐</h3>
+              <p>{movie.overview}</p>
+            </div>
           </div>
         </div>
       )}

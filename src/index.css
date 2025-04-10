@@ -18,7 +18,7 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 img,
@@ -50,9 +50,12 @@ ol {
 :root {
   --color-primary: #3b424e;
   --color-secondary: #282c34;
-  --color-primary-faded: #3b424ea2;
-  --color-secondary-faded: #282c345d;
+  --color-primary-faded: #3b424eac;
+  --color-secondary-faded: #282c34a9;
   --text-color-primary: #ffffff;
+
+  --footer-height: 25px;
+  --header-height: 100px;
 }
 
 /* App layout structure */
