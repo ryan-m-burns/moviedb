@@ -50,5 +50,18 @@ ol {
 :root {
   --color-primary: #3b424e;
   --color-secondary: #282c34;
+  --color-primary-faded: #3b424ea2;
+  --color-secondary-faded: #282c345d;
   --text-color-primary: #ffffff;
+}
+
+/* App layout structure */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }

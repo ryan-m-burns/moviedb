@@ -12,12 +12,14 @@ export default function AppRouter() {
     <BrowserRouter>
       <GlobalProvider>
         <Header />
-        <Routes>
-          <Route path='/' element={<PageHome />} />
-          <Route path='/movie/:id' element={<PageMovie />} />
-          <Route path='/about' element={<PageAbout />} />
-          <Route path='/favourites' element={<PageFavourites />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path='/' element={<PageHome />} />
+            <Route path='/movie/:id' element={<PageMovie />} />
+            <Route path='/about' element={<PageAbout />} />
+            <Route path='/favourites' element={<PageFavourites />} />
+          </Routes>
+        </main>
         <Footer />
       </GlobalProvider>
     </BrowserRouter>
