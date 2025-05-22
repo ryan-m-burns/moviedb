@@ -12,6 +12,20 @@ export default function MovieCard({ movie }) {
     <div onClick={() => navigate(`/movie/${movie.id}`)} className='movie-card'>
       <img
         src={`${IMG_URL}w342${movie.poster_path}`}
+        srcSet={`
+          ${IMG_URL}w154${movie.poster_path} 154w,
+          ${IMG_URL}w185${movie.poster_path} 185w,
+          ${IMG_URL}w342${movie.poster_path} 342w,
+          ${IMG_URL}w500${movie.poster_path} 500w,
+          ${IMG_URL}w780${movie.poster_path} 780w
+        `}
+        sizes='
+          (max-width: 600px) 154px,
+          (max-width: 900px) 185px,
+          (max-width: 1200px) 342px,
+          (max-width: 1800px) 500px,
+          780px
+        '
         alt={movie.title}
         className='movie-poster'
       />

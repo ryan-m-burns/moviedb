@@ -6,9 +6,7 @@
   background-color: var(--color-primary-faded);
   color: var(--text-color-primary);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  min-height: calc(
-    100vh - var(--header-height) - var(--footer-height)
-  ); /* Subtract header and footer height */
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
   width: 100%;
   margin: 0;
   position: relative;
@@ -47,11 +45,31 @@
   display: flex;
   flex-direction: row;
   padding: 2rem;
-
+  align-items: center;
+  justify-content: space-between;
   border-radius: 10px;
   max-width: 800px;
-  width: 90%;
+  width: 90vw;
   margin: 0 auto;
   gap: 10%;
   z-index: 1;
 }
+/* 
+.movie-detail-poster {
+  width: 300px;
+  height: auto;
+  float: left; 
+  margin-right: 20px; 
+  border-radius: 10px;
+}
+
+.movie-details {
+  display: block; 
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden; 
+} */

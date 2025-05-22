@@ -1,11 +1,10 @@
 .movies {
-  margin: 2rem 0;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
 }
 .movies h1 {
   font-size: 2rem;
   color: var(--text-color-primary);
-  padding-left: 3rem;
+  padding-left: 1.5rem;
 }
 .movies-container {
   display: flex;

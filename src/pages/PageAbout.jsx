@@ -2,7 +2,7 @@ import './PageAbout.css';
 
 export default function PageAbout() {
   return (
-    <div>
+    <div className='page-about'>
       <h1>Page About</h1>
     </div>
   );

@@ -52,8 +52,9 @@ ol {
   --color-secondary: #282c34;
   --color-primary-faded: #3b424eac;
   --color-secondary-faded: #282c34a9;
+  --color-primary-gradient: #3b424e20;
+  --color-secondary-gradient: #282c34;
   --text-color-primary: #ffffff;
-
   --footer-height: 25px;
   --header-height: 100px;
 }
