@@ -21,7 +21,11 @@ export default function FavouriteButton({ movie }) {
   return (
     <button className='favourite-btn' onClick={handleClick}>
       {isFavourite ? (
-        <FontAwesomeIcon icon={faHeart} className='filled-heart' />
+        <FontAwesomeIcon
+          icon={faHeart}
+          className='filled-heart'
+          style={{ opacity: 1 }}
+        />
       ) : (
         <FontAwesomeIcon icon={faHeart} className='hollow-heart' />
       )}
