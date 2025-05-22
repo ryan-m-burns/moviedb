@@ -1,6 +1,4 @@
 .hero-card {
-  width: 100vw;
-  height: 50vh;
 }
 
 .hero-card::after {
@@ -19,7 +17,7 @@
   z-index: -1;
 }
 .hero-card__image-container {
-  height: 25vh;
+  min-height: 10rem;
 }
 .hero-card__image {
   position: absolute;
@@ -34,6 +32,8 @@
   color: var(--text-color-primary);
   text-shadow: var(--text-shadow-primary);
   margin: 1rem;
+  width: 60vw;
+  height: 20rem;
 }
 .hero-card__title {
   font-size: 2rem;
@@ -59,7 +59,11 @@
 @media (min-width: 768px) {
   .hero-card {
     width: 80vw;
-    height: 55vh;
+    height: 40rem;
+  }
+
+  .hero-card__image-container {
+    min-height: 15rem;
   }
 
   .hero-card__content {
@@ -68,7 +72,6 @@
 
   .hero-card__title {
     font-size: 3rem;
-    padding-bottom: 1.5rem;
   }
 
   .hero-card__release-date {
@@ -89,7 +92,7 @@
 @media (min-width: 1500px) {
   .hero-card {
     width: 60vw;
-    height: 55vh;
+    height: 45rem;
   }
   .hero-card__title {
     font-size: 4rem;
