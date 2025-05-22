@@ -25,7 +25,7 @@ const HeroCard = ({ movie }) => {
       </div>
       <div className='hero-card__content'>
         <h1 className='hero-card__title'> {movie.title}</h1>
-        <h2 className='hero-card__subtitle'>{movie.release_date}</h2>
+        <h4 className='hero-card__release-date'>{movie.release_date}</h4>
         <p className='hero-card__description'> {movie.overview}</p>
       </div>
     </section>

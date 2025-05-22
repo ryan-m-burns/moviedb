@@ -5,6 +5,7 @@
   font-size: 2rem;
   color: var(--text-color-primary);
   padding-left: 1.5rem;
+  text-shadow: var(--text-shadow-primary);
 }
 .movies-container {
   display: flex;

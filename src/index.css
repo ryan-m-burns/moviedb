@@ -55,6 +55,7 @@ ol {
   --color-primary-gradient: #3b424e20;
   --color-secondary-gradient: #282c34;
   --text-color-primary: #ffffff;
+  --text-shadow-primary: 2px 2px 4px rgba(0, 0, 0, 0.5);
   --footer-height: 25px;
   --header-height: 100px;
 }
