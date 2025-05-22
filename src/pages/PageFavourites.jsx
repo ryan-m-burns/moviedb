@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import Movies from '../components/Movies/Movies';
 import { getRecommendedMovies } from '../utils/api';
+import HeroCard from '../components/Movies/HeroCard';
 
 export default function PageFavourites() {
   const { favourites } = useContext(GlobalContext);
@@ -34,12 +35,15 @@ export default function PageFavourites() {
         <h1 className='no-favourites'>No Favourites Yet</h1>
       ) : (
         <>
-          <Movies title='Favourites' movies={favourites} />
           {randomFavouriteMovie && (
-            <Movies
-              title={`If you liked ${randomFavouriteMovie.title}, you may also like...`}
-              movies={recommendedMovies}
-            />
+            <>
+              <HeroCard movie={randomFavouriteMovie} />
+              <Movies title='Favourites' movies={favourites} />
+              <Movies
+                title={`If you liked ${randomFavouriteMovie.title}, you may also like...`}
+                movies={recommendedMovies}
+              />
+            </>
           )}
         </>
       )}
