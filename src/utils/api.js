@@ -41,6 +41,22 @@ function getTopRatedMovies() {
       throw error;
     });
 }
+
+function getRecommendedMovies(movieId) {
+  return fetch(
+    `${BASE_URL}/movie/${movieId}/recommendations?api_key=${API_KEY}`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch recommended movies');
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error fetching recommended movies:', error);
+      throw error;
+    });
+}
 // function getMoviesByGenre(genreId) {
 //   return fetch(
 //     `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`
@@ -75,5 +91,6 @@ export {
   getPopularMovies,
   getNowPlayingMovies,
   getTopRatedMovies,
+  getRecommendedMovies,
   getMovieById,
 };

@@ -30,11 +30,13 @@ export default function Header() {
 
   return (
     <header>
-      <img
-        src='/images/rmdb-high-resolution-logo-transparent.png'
-        alt='rmdb-logo'
-        className='rmdb-logo'
-      />
+      <Link to='/'>
+        <img
+          src='/images/rmdb-high-resolution-logo-transparent.png'
+          alt='rmdb-logo'
+          className='rmdb-logo'
+        />
+      </Link>
       <Hamburger toggled={isOpen} toggle={setOpen} />
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <Link

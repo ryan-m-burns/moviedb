@@ -1,5 +1,6 @@
 footer p {
   text-align: center;
   color: var(--text-color-primary);
+  background-color: var(--color-secondary);
   padding-bottom: 0.25rem;
 }

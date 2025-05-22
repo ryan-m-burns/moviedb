@@ -18,22 +18,34 @@ export default function PageMovie() {
 
   console.log('Movie:', movie);
   return (
-    <div className='page-movie'>
+    <>
       {movie && (
-        <>
-          <img
-            src={`${IMG_URL}w780${movie?.backdrop_path}`}
-            alt={movie?.title}
-          />
-          <h2>{movie.title}</h2>
-          <FavouriteButton movie={movie} />
-          <h3>{formatReleaseDate(movie.release_date)}</h3>
-          <h3>{movie.runtime} min</h3>
-          <h3>{formatRating(movie.vote_average)} ⭐</h3>
-          <p>{movie.overview}</p>
-        </>
+        <div className='page-movie'>
+          <div className='image-detail-container'>
+            <img
+              src={`${IMG_URL}original${movie?.backdrop_path}`}
+              alt={movie?.title}
+              className='movie-detail-backdrop'
+            />
+          </div>
+          <div className='movie-details'>
+            <img
+              src={`${IMG_URL}w342${movie?.poster_path}`}
+              alt={movie?.title}
+              className='movie-detail-poster'
+            />
+            <div className='movie-detail-info'>
+              <h2>{movie.title}</h2>
+              <FavouriteButton movie={movie} />
+              <h3>{formatReleaseDate(movie.release_date)}</h3>
+              <h3>{movie.runtime} min</h3>
+              <h3>{formatRating(movie.vote_average)} ⭐</h3>
+              <p>{movie.overview}</p>
+            </div>
+          </div>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 /*{
